@@ -1,39 +1,40 @@
 import java.util.Scanner;
 
-public class ValidacionDeEntradaConWhile {
+public class SumaSeries {
+
     public static void main(String[] args) {
 
-        Scanner entrada = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        int edad;
+        System.out.print("Ingrese n: ");
+        int n = sc.nextInt();
 
-        System.out.print("Ingrese su edad: ");
-        edad = entrada.nextInt();
+        
+        int suma1 = 0;
 
-        while (edad < 1 || edad > 120) {
-
-            System.out.println("Error: la edad debe estar entre 1 y 120.");
-
-            System.out.print("Ingrese nuevamente su edad: ");
-            edad = entrada.nextInt();
+        for (int i = 1; i <= n; i++) {
+            suma1 = suma1 + i;
         }
 
-        if (edad <= 12) {
-            System.out.println("Etapa: Niñez");
-        }
-        else if (edad <= 17) {
-            System.out.println("Etapa: Adolescencia");
-        }
-        else if (edad <= 25) {
-            System.out.println("Etapa: Juventud");
-        }
-        else if (edad <= 59) {
-            System.out.println("Etapa: Adultez");
-        }
-        else {
-            System.out.println("Etapa: Tercera edad");
+        System.out.println("Suma de naturales: " + suma1);
+
+
+        int suma2 = 0;
+
+        for (int i = 1; i <= n; i++) {
+            suma2 = suma2 + (2 * i);
         }
 
-        entrada.close();
+        System.out.println("Suma de pares: " + suma2);
+
+
+        int suma3 = 0;
+
+        for (int i = 1; i <= n; i++) {
+            suma3 = suma3 + (i * i);
+        }
+
+        System.out.println("Suma de cuadrados: " + suma3);
+    sc.close();
     }
 }
